@@ -3,27 +3,27 @@ import os
 import sys
 from PIL import Image
 
-# ===========================
+
 # 設定
-# ===========================
+
 
 # run.py のあるディレクトリを基準
 base_dir = os.path.dirname(os.path.abspath(__file__))
 
 # images フォルダに置いたファイル名
-image_filename = "tD_bP_dsKZ5Sbo_Z_aR7KGlN5E9AIHUbywDE6vpHWdE-removebg-preview.png"
+image_filename = "" # imagesに置いたpngファイル
 
 # 画像の絶対パス
 image_path = os.path.join(base_dir, "images", image_filename)
 
 # AA変換用のサイズ
-width, height = 300, 200          # AA化サイズ（大きめ推奨）
+width, height = 300, 200          # AA化サイズ
 terminal_width = 500            # スクロール幅
 scroll_speed = 0.05             # スクロール速度（秒）
 
-# ===========================
+
 # 画像読み込み
-# ===========================
+
 
 if not os.path.exists(image_path):
     print(f"Error: 画像ファイルが見つかりません -> {image_path}")
@@ -57,9 +57,9 @@ for y in range(height):
             line += ascii_chars[char_index]
     aa_lines.append(line)
 
-# ===========================
+
 # 右から左にスクロール表示
-# ===========================
+
 
 import time
 import shutil

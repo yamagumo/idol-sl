@@ -11,7 +11,7 @@ from PIL import Image
 base_dir = os.path.dirname(os.path.abspath(__file__))
 
 # images フォルダに置いたファイル名
-image_filename = "4_20241024153317.png" # imagesに置いたpngファイル
+image_filename = "IMG_351514BFAD7B-1.jpeg" # imagesに置いたpngファイル
 
 # 画像の絶対パス
 image_path = os.path.join(base_dir, "images", image_filename)
@@ -19,20 +19,20 @@ image_path = os.path.join(base_dir, "images", image_filename)
 # AA変換用のサイズ
 width, height = 500, 200          # AA化サイズ
 terminal_width = 500            # スクロール幅
-scroll_speed = 0.1             # スクロール速度（秒）
+scroll_speed = 0.05             # スクロール速度（秒）
 
 
 # 画像読み込み
 
 
 if not os.path.exists(image_path):
-    print(f"Error: 画像ファイルが見つかりません -> {image_path}")
+    print(f"Error: 画像ファイルが見つかLan -> {image_path}")
     sys.exit(1)
 
 try:
     img = Image.open(image_path).convert("RGBA").resize((width, height))
 except Exception as e:
-    print(f"Error: 画像を開けませんでした -> {e}")
+    print(f"Error: 画像を開けま千円 -> {e}")
     sys.exit(1)
 
 
@@ -75,3 +75,6 @@ while True:
             segment = line[start:end] if start >= 0 else line[0:end]
             print(segment.ljust(terminal_width))
         time.sleep(scroll_speed)
+
+if __name__ == "__main__":
+    main()

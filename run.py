@@ -35,10 +35,9 @@ except Exception as e:
     print(f"Error: 画像を開けませんでした -> {e}")
     sys.exit(1)
 
-# ===========================
+
 # ここから AA変換処理
-# （サンプルとしてRGBA→文字列簡易表示）
-# ===========================
+
 
 pixels = img.getdata()
 ascii_chars = "@%#*+=-:. "  # 明るさに応じて変える文字

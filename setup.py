@@ -2,15 +2,18 @@ from setuptools import setup, find_packages
 
 setup(
     name="ibukichi",
-    version="0.1.0",
+    version="0.1.1",
     packages=find_packages(),
-    include_package_data=True,
     install_requires=[
         "Pillow"
     ],
+    include_package_data=True,
+    package_data={
+        "ibukichi": ["images/*"]
+    },
     entry_points={
         "console_scripts": [
-            "ibukichi=ibukichi.run:main"
+            "ibukichi=ibukichi.main:main"
         ]
-    },
+    }
 )

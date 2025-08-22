@@ -11,15 +11,15 @@ from PIL import Image
 base_dir = os.path.dirname(os.path.abspath(__file__))
 
 # images フォルダに置いたファイル名
-image_filename = "" # imagesに置いたpngファイル
+image_filename = "4_20241024153317.png" # imagesに置いたpngファイル
 
 # 画像の絶対パス
 image_path = os.path.join(base_dir, "images", image_filename)
 
 # AA変換用のサイズ
-width, height = 300, 200          # AA化サイズ
+width, height = 500, 200          # AA化サイズ
 terminal_width = 500            # スクロール幅
-scroll_speed = 0.05             # スクロール速度（秒）
+scroll_speed = 0.1             # スクロール速度（秒）
 
 
 # 画像読み込み

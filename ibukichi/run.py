@@ -11,7 +11,7 @@ from PIL import Image
 base_dir = os.path.dirname(os.path.abspath(__file__))
 
 # images フォルダに置いたファイル名
-image_filename = "IMG_351514BFAD7B-1.jpeg" # imagesに置いたpngファイル
+image_filename = "4_20241024153317.png" # imagesに置いたpngファイル
 
 # 画像の絶対パス
 image_path = os.path.join(base_dir, "images", image_filename)
